@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đơn Đăng Ký</title>
+    <style>
+        * { box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f7f6; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+        .card { background: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: 100%; max-width: 450px; }
+        h2 { text-align: center; color: #333; margin-bottom: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: 600; color: #555; }
+        input, textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; outline: none; }
+        input:focus, textarea:focus { border-color: #007bff; }
+        button { width: 100%; padding: 12px; background: #007bff; color: white; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        button:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Form Đăng Ký</h2>
+    <form action="https://formspree.io/f/mgaajjna" method="POST">
+        <div class="form-group">
+            <label for="fullname">Họ và Tên:</label>
+            <input type="text" id="fullname" name="Ho_Va_Ten" placeholder="Nguyễn Văn A" required>
+        </div>
+
+        <div class="form-group">
+            <label for="reason">Lý do đăng ký:</label>
+            <textarea id="reason" name="Ly_Do_Dang_Ky" rows="5" placeholder="Nhập lý do đăng ký..." required></textarea>
+        </div>
+
+        <button type="submit">Gửi Đăng Ký</button>
+    </form>
+</div>
+
+</body>
+</html>
