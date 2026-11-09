@@ -3,37 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đơn Đăng Ký</title>
+    <title>Trang Chủ</title>
     <style>
         * { box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background-color: #f4f7f6; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
-        .card { background: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: 100%; max-width: 450px; }
-        h2 { text-align: center; color: #333; margin-bottom: 20px; }
-        .form-group { margin-bottom: 15px; }
-        label { display: block; margin-bottom: 5px; font-weight: 600; color: #555; }
-        input, textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; outline: none; }
-        input:focus, textarea:focus { border-color: #007bff; }
-        button { width: 100%; padding: 12px; background: #007bff; color: white; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.3s; }
-        button:hover { background: #0056b3; }
+        
+        .card { background: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: 100%; max-width: 450px; text-align: center; }
+        h2 { color: #333; margin-bottom: 20px; }
+        
+        /* CSS cho nút đặc quyền dạng icon tròn */
+        .privilege-link {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            background-color: #f0f4f8;
+            padding: 8px 16px 8px 8px;
+            border-radius: 50px;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-top: 15px;
+        }
+
+        .privilege-link:hover {
+            background-color: #e2e8f0;
+            transform: translateY(-2px);
+        }
+
+        .icon-circle {
+            width: 36px;
+            height: 36px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .link-text {
+            color: #333;
+            font-size: 15px;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
 
 <div class="card">
-    <h2>Form Đăng Ký</h2>
+    <h2>Trang Đăng Ký</h2>
+    
+    <!-- Form cũ của bạn -->
     <form action="https://formspree.io/f/mgaajjna" method="POST">
-        <div class="form-group">
-            <label for="fullname">Họ và Tên:</label>
-            <input type="text" id="fullname" name="Ho_Va_Ten" placeholder="Nguyễn Văn A" required>
+        <div style="margin-bottom: 15px; text-align: left;">
+            <label for="fullname" style="display: block; margin-bottom: 5px; font-weight: 600; color: #555;">Họ và Tên:</label>
+            <input type="text" id="fullname" name="Ho_Va_Ten" placeholder="Nguyễn Văn A" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; outline: none;">
         </div>
 
-        <div class="form-group">
-            <label for="reason">Lý do đăng ký:</label>
-            <textarea id="reason" name="Ly_Do_Dang_Ky" rows="5" placeholder="Nhập lý do đăng ký..." required></textarea>
+        <div style="margin-bottom: 15px; text-align: left;">
+            <label for="reason" style="display: block; margin-bottom: 5px; font-weight: 600; color: #555;">Lý do đăng ký:</label>
+            <textarea id="reason" name="Ly_Do_Dang_Ky" rows="4" placeholder="Nhập lý do đăng ký..." required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; outline: none;"></textarea>
         </div>
 
-        <button type="submit">Gửi Đăng Ký</button>
+        <button type="submit" style="width: 100%; padding: 12px; background: #007bff; color: white; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.3s;">Gửi Đăng Ký</button>
     </form>
+
+    <!-- Khu vực hiển thị nút hình tròn dấu chấm hỏi và chữ đặc quyền -->
+    <div>
+        <a href="page1.html" class="privilege-link">
+            <div class="icon-circle">?</div>
+            <span class="link-text">đặt quyền</span>
+        </a>
+    </div>
 </div>
 
 </body>
